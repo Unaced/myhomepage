@@ -1,5 +1,6 @@
 const FullpagePortfolio = () => {
     const [currentSection, setCurrentSection] = React.useState(0);
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const sections = ['home', 'about', 'projects', 'skills', 'contact'];
 
     const handleWheel = (e) => {
@@ -12,14 +13,25 @@ const FullpagePortfolio = () => {
 
     const goToSection = (index) => {
         setCurrentSection(index);
+        setIsMenuOpen(false); // 섹션 이동 시 메뉴 닫기
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
         <div style={{ height: '100vh', overflow: 'hidden' }}>
             <header className="header">
                 <div className="logo">KTY1025의 포트폴리오</div>
+                <button className="menu-button" onClick={toggleMenu}>
+                    ☰
+                </button>
                 <nav>
-                    <ul className="nav-list">
+                    <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
+                        <button className="close-button" onClick={toggleMenu}>
+                            ×
+                        </button>
                         {sections.map((section, index) => (
                             <li key={section}>
                                 <button
@@ -91,5 +103,7 @@ const FullpagePortfolio = () => {
     );
 };
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<FullpagePortfolio />);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<FullpagePortfolio />);
