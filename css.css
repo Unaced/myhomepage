@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+/* 헤더 스타일 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-button:hover {
+    color: #60A5FA;
+}
+
+.nav-button.active {
+    color: #60A5FA;
+}
+
+/* 섹션 스타일 */
+.fullpage-container {
+    height: 100vh;
+    transition: transform 700ms ease-in-out;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.section-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 섹션별 배경색 */
+.section-home { 
+    background-color: #1F2937; 
+    color: white; 
+}
+
+.section-about { 
+    background-color: white; 
+}
+
+.section-projects { 
+    background-color: #F9FAFB; 
+}
+
+.section-skills { 
+    background-color: white; 
+}
+
+.section-contact { 
+    background-color: #F9FAFB; 
+}
+
+/* 기술 스택 태그 */
+.skill-tag {
+    display: inline-block;
+    background-color: #3B82F6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    margin: 0.5rem;
+}
+
+/* 프로젝트 카드 */
+.project-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+/* 소셜 링크 스타일 */
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-link {
+    margin: 0 1rem;
+    color: #1F2937;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #60A5FA;
+}
