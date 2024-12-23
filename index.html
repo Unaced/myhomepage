@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTY1025의 포트폴리오</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            overflow: hidden;
+        }
+
+        /* 스크롤바 숨기기 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* 부드러운 스크롤 동작 */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Your React Component -->
+    <script type="text/babel" src="./FullpagePortfolio.js"></script>
+    
+    <!-- Initialize React App -->
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<FullpagePortfolio />);
+    </script>
+</body>
+</html>
